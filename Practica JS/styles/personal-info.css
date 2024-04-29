@@ -1,0 +1,62 @@
+@media (orientation: landscape) {
+    #pi-container {
+        display: grid;
+        grid-template-areas: 
+        "name name name"
+        "h-sep h-sep h-sep"
+        ". v-sep image"
+        ". v-sep image"
+        ". v-sep image"
+        ". v-sep image"
+        ". v-sep image"
+        ". v-sep image"
+        ". v-sep image";
+    
+        grid-template-columns: auto 2px 300px;
+        gap: 15px 15px;
+    }
+    
+    .h-separator {
+        grid-area: h-sep;
+    }
+    
+    .v-separator {
+        grid-area: v-sep;
+    }
+    
+    #profile-pic {
+        grid-area: image;
+        width: 300px;
+        align-self: center;
+    }
+    
+    #name {
+        grid-area: name;
+    }
+}
+
+@media (orientation: portrait) {
+    #pi-container {
+        display: grid;
+        grid-template-rows: repeat(9, auto);
+        row-gap: 15px;
+    }
+    
+    .h-separator {
+        grid-row: 3;
+    }
+    
+    .v-separator {
+        display: none;
+    }
+    
+    #profile-pic {
+        grid-row: 1;
+        width: 300px;
+        justify-self: center;
+    }
+    
+    #name {
+        justify-self: center;
+    }
+}

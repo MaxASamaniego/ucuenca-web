@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet">
+    <title>Historia clínica</title>
+</head>
+<body>
+    <header>
+        <button type="button" alt="Menú" id="menu-button" class="borderless-round-button accented-button header-button">
+            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </button>
+        
+        <button type="button" alt="Usuario" id="user-button" class="borderless-round-button accented-button header-button">
+            <svg id="user-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM15 9C15 10.6569 13.6569 12 12 12C10.3431 12 9 10.6569 9 9C9 7.34315 10.3431 6 12 6C13.6569 6 15 7.34315 15 9ZM12 20.5C13.784 20.5 15.4397 19.9504 16.8069 19.0112C17.4108 18.5964 17.6688 17.8062 17.3178 17.1632C16.59 15.8303 15.0902 15 11.9999 15C8.90969 15 7.40997 15.8302 6.68214 17.1632C6.33105 17.8062 6.5891 18.5963 7.19296 19.0111C8.56018 19.9503 10.2159 20.5 12 20.5Z"/>
+                </svg>
+        </button>
+        
+        <div class="spacer"></div>
+        
+        <button type="button" alt="Editar" id="edit-button" class="borderless-round-button accented-button header-button hidden">
+            <svg id="edit-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+            </svg>
+        </button>
+
+        <button type="button" id="theme-button" class="borderless-round-button accented-button header-button">
+            <svg id="themeIcon" width="24" height="24" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M185.98 70.0172C217.993 102.04 218.006 153.96 185.983 185.983C153.96 218.006 102.04 218.006 70.0172 185.983C37.9942 153.96 37.9942 102.04 70.0172 70.0172C102.04 37.9943 153.947 37.9943 185.97 70.0172Z" fill="black"/>
+                <path id="theme-icon-body" d="M185.98 70.0172C217.993 102.04 218.006 153.96 185.983 185.983C153.96 218.006 102.04 218.006 70.0172 185.983C37.9942 153.96 37.9942 102.04 70.0172 70.0172C102.04 37.9943 153.947 37.9943 185.97 70.0172Z" fill="white"/>
+                <path id="theme-icon-sunrays" d="M127.5 37V12M127.5 244V219M64.0068 192.7L46.3292 210.378M210.378 46.3292L192.7 64.0068M37 128.5H12M244 128.5H219M63.2997 64.0068L45.6221 46.3292M209.671 210.378L191.993 192.7" stroke="white" stroke-width="16"/>
+            </svg>
+        </button>
+        
+    </header>
+    <div id="body-div">
+        <div id="sm-sticky">
+            <div id="side-menu">
+                <ul>
+                    <li id="info-menu-item">Información personal</li>
+                    <li id="consult-menu-item">Consultas</li>
+                    <li id="children-menu-item">Hijos</li>
+                </ul>
+            </div>
+        </div>
+        <main>
+            
+        </main>
+    </div>
+    <script src="scripts/mainScript.js"></script>
+</body>
+</html>
