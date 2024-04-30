@@ -2,16 +2,22 @@
 @import url(header.css);
 @import url(side-menu.css);
 @import url(personal-info.css);
+@import url(info-edit.css);
 
 .borderless-round-button {
-  border: 0;
+  border: none;
   border-radius: 50%;
   padding: 0px 0px;
   margin: 0px 0px;
 }
 
+.borderless-button {
+  border: none;
+}
+
 .accented-button {
   background-color: var(--primary-color);
+  color: var(--accent-fg-color);
   transition: background-color 0.3s;
 }
 
@@ -22,11 +28,13 @@
 .h-separator {
   height: 0px;
   border: var(--hint-color) 2px solid;
+  grid-area: h-sep;
 }
 
 .v-separator {
   width: 0px;
   border: var(--hint-color) 2px solid;
+  grid-area: v-sep;
 }
 
 body {
@@ -52,6 +60,13 @@ main {
   margin-top: 55px;
   color: var(--fg-color);
   display: flex;
+}
+
+.highlight-container {
+  box-shadow: 0 0 7px 0px var(--fg-color);
+  background-color: var(--bg-secondary-color);
+  border-radius: 10px;
+  padding: 15px 15px;
 }
 
 .gr-responsive-container {
@@ -127,4 +142,16 @@ main {
 .rounded-table>tbody:not(:last-child),
 .rounded-table>tfoot:not(:last-child) {
   border-bottom: var(--hint-color) 2px solid;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  top: -1px !important;
+  left: -1px !important;
+  overflow: hidden;
 }

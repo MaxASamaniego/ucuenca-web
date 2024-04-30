@@ -237,19 +237,21 @@ class Patient {
         const ageMap = this.getAge();
 
         return `
-            <div id="pi-container" class="gr-responsive-container l-gradient-border">
-                <img id="profile-pic" src="${this.profilePic}" alt="Foto de perfil">
-                <span id="name" class="title">${this.name} ${this.lastName}</span>
-                <div class="h-separator"></div>
-                <div class="v-separator"></div>
-                <span><b>ID: ${this.id}</b></span>
-                <span><b>País: ${this.country}</b></span>
-                <span><b>Ciudad: ${this.city}</b></span>
-                <span><b>Dirección: ${this.address}</b></span>
-                <span><b>Teléfono: ${this.phone}</b></span>
-                <span><b>Fecha de nacimiento: ${this.getBirthDate()}</b></span>
-                <span><b>Hora de nacimiento: ${this.getBirthHour()}</b></span>
-                <span><b>Edad: ${ageMap.years} años ${ageMap.months} meses ${ageMap.days} días ${ageMap.hours} horas</b></span>
+            <div class="gr-responsive-container l-gradient-border">
+                <div id="pi-container" class="highlight-container">
+                    <img id="profile-pic" src="${this.profilePic}" alt="Foto de perfil">
+                    <span id="name" class="title">${this.name} ${this.lastName}</span>
+                    <div class="h-separator"></div>
+                    <div class="v-separator"></div>
+                    <span><b>ID: ${this.id}</b></span>
+                    <span><b>País: ${this.country}</b></span>
+                    <span><b>Ciudad: ${this.city}</b></span>
+                    <span><b>Dirección: ${this.address}</b></span>
+                    <span><b>Teléfono: ${this.phone}</b></span>
+                    <span><b>Fecha de nacimiento: ${this.getBirthDate()}</b></span>
+                    <span><b>Hora de nacimiento: ${this.getBirthHour()}</b></span>
+                    <span><b>Edad: ${ageMap.years} años ${ageMap.months} meses ${ageMap.days} días ${ageMap.hours} horas</b></span>
+                </div>
             </div>
         `;
     }
@@ -395,6 +397,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     editButton.addEventListener("click", () => {
-        changeContent(`Yet another PLACEHOLDER. :D`);
+        changeContent(`
+        <div id="form-root-container" class="gr-responsive-container l-gradient-border">
+            <div class="highlight-container">
+                <form id="form" action="#" method="post">
+                    <label class="visually-hidden" for="name-input">Nombre</label>
+                    <input type="text" id="name-input" placeholder="Nombre">
+        
+                    <label class="visually-hidden" for="last-name-input">Apellido</label>
+                    <input type="text" id="last-name-input" placeholder="Apellido">
+
+                    <label class="visually-hidden" for="id-input">Identificación</label>
+                    <input type="number" id="id-input" placeholder="Identificación">
+
+                    <label class="visually-hidden" for="phone-input">Teléfono</label>
+                    <input type="tel" id="phone-input" placeholder="Teléfono" pattern="[0-9]{10}">
+
+                    <div id="birthdate-div">
+                        <label id="birthdate-label" for="birthdate-input">Fecha de nacimiento: </label>
+                        <input type="datetime-local" id="birthdate-input">
+                    </div>
+
+                    <label class="visually-hidden" for="address-input">Dirección</label>
+                    <input type="text" id="address-input" placeholder="Dirección">
+
+                    <label class="visually-hidden" for="city-select">Ciudad</label>
+                    <select name="city" id="city-select"></select>
+        
+                    <label class="visually-hidden" for="country-select">País</label>
+                    <select name="country" id="country-select">
+                        <option value="ec">Ecuador</option>
+                        <option value="mx">México</option>
+                        <option value="us">Estados Unidos</option>
+                    </select>
+
+                    <div class="v-separator"></div>
+        
+                    <label id="image-label" class="accented-button" for="image-input">Subir imagen</label>
+                    <input type="file" id="image-input">
+                    <button type="submit" id="submit-button" class="accented-button">Guardar</button>
+                </form>
+            </div>
+        </div>
+        `);
     });
 });

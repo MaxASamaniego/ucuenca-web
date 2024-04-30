@@ -1,0 +1,157 @@
+@import url(properties.css);
+@import url(header.css);
+@import url(side-menu.css);
+@import url(personal-info.css);
+@import url(info-edit.css);
+
+.borderless-round-button {
+  border: none;
+  border-radius: 50%;
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+
+.borderless-button {
+  border: none;
+}
+
+.accented-button {
+  background-color: var(--primary-color);
+  color: var(--accent-fg-color);
+  transition: background-color 0.3s;
+}
+
+.accented-button:hover {
+  background-color: var(--accent-color);
+}
+
+.h-separator {
+  height: 0px;
+  border: var(--hint-color) 2px solid;
+  grid-area: h-sep;
+}
+
+.v-separator {
+  width: 0px;
+  border: var(--hint-color) 2px solid;
+  grid-area: v-sep;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  min-width: 300px;
+  min-height: 500px;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+#body-div {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  height: auto;
+}
+
+main {
+  flex: 1 1 auto;
+  position: relative;
+  margin-top: 55px;
+  color: var(--fg-color);
+  display: flex;
+}
+
+.highlight-container {
+  box-shadow: 0 0 7px 0px var(--fg-color);
+  background-color: var(--bg-secondary-color);
+  border-radius: 10px;
+  padding: 15px 15px;
+}
+
+.gr-responsive-container {
+  border-radius: 10px;
+  background-color: var(--bg-color);
+}
+
+@media (orientation: landscape) {
+  .gr-responsive-container {
+      width: 80%;
+      padding: 15px 15px;
+
+      --gr-border-color: var(--primary-color), var(--bg-color), var(--bg-color), var(--bg-color), var(--primary-color);
+      --gr-border-width: -10px -10px;
+      --gr-border-dir: to bottom right;
+  }
+
+  .rounded-table td,
+  .rounded-table th {
+    padding: 5px 5px;
+  }
+}
+
+@media (orientation: portrait) {
+  .gr-responsive-container {
+      width: calc(90% - 30px);
+      padding: 10px 15px;
+
+      --gr-border-color: var(--bg-color), var(--primary-color), var(--bg-color);
+      --gr-border-width: -10px 0px;
+      --gr-border-dir: to right;
+  }
+
+  .rounded-table td,
+  .rounded-table th {
+    padding: 10px 5px;
+  }
+}
+
+.centered-td {
+  text-align: center;
+}
+
+.rounded-table {
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 10px;
+  border-spacing: 0px;
+  overflow: hidden;
+  background-color: var(--bg-secondary-color);
+  box-shadow: 0 0 7px 0px var(--fg-color);
+}
+
+.rounded-table th {
+  background-color: var(--primary-color);
+  color: var(--accent-fg-color);
+}
+
+.rounded-table th:not(:last-child),
+.rounded-table td:not(:last-child) {
+  border-right: var(--hint-color) 2px solid;
+}
+
+.rounded-table>thead>tr:not(:last-child)>th,
+.rounded-table>thead>tr:not(:last-child)>td,
+.rounded-table>tbody>tr:not(:last-child)>th,
+.rounded-table>tbody>tr:not(:last-child)>td,
+.rounded-table>tfoot>tr:not(:last-child)>th,
+.rounded-table>tfoot>tr:not(:last-child)>td,
+.rounded-table>tr:not(:last-child)>td,
+.rounded-table>tr:not(:last-child)>th,
+.rounded-table>thead:not(:last-child),
+.rounded-table>tbody:not(:last-child),
+.rounded-table>tfoot:not(:last-child) {
+  border-bottom: var(--hint-color) 2px solid;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  top: -1px !important;
+  left: -1px !important;
+  overflow: hidden;
+}

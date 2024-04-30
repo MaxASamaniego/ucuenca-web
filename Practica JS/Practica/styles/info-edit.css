@@ -1,0 +1,127 @@
+#form-root-container {
+    width: 95%;
+}
+
+#form {
+    display: grid;
+    grid-template-areas: 
+    "name name last-name last-name v-sep image"
+    "id phone birthdate birthdate v-sep image"
+    "address address country city v-sep image"
+    "submit submit submit submit v-sep select-image";
+    grid-template-columns: repeat(4, 1fr) 2px 400px;
+    gap: 40px 10px;
+    min-height: 60vh;
+}
+
+#form * {
+    font-size: 1.2em;
+}
+
+#form input,
+#form select {
+    outline: none;
+    padding: 0px 5%;
+    border-radius: 25px;
+    border: var(--hint-color) solid 2px;
+}
+
+#form input:focus,
+#form select:focus {
+    border: var(--primary-color) solid 2px;
+}
+
+#form input {
+    background: linear-gradient(var(--primary-color), var(--primary-color)) center bottom 10px /90% 0px no-repeat;
+    transition: background-size 0.3s ease;
+}
+
+#form input:focus {
+    background-size: 90% 3px;
+}
+
+#name-input {
+    grid-area: name;
+}
+
+#last-name-input {
+    grid-area: last-name;
+}
+
+#id-input {
+    grid-area: id;
+}
+
+#phone-input {
+    grid-area: phone;
+}
+
+#birthdate-div {
+    grid-area: birthdate;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 0px 5%;
+
+    border: var(--hint-color) 2px solid;
+    border-radius: 25px;
+
+    background: linear-gradient(var(--primary-color), var(--primary-color)) center bottom 10px /90% 0px no-repeat;
+    transition: background-size 0.3s ease;
+}
+
+#birthdate-div:hover {
+    border: var(--primary-color) solid 2px;
+    background-size: 90% 3px;
+}
+
+#birthdate-label {
+    font-size: 1.05em;
+}
+
+#birthdate-input {
+    border: none !important;
+    font-size: 1.05em;
+}
+
+#birthdate-input:focus {
+    border: none !important;
+    background: none !important;
+}
+
+#address-input {
+    grid-area: address;
+}
+
+#country-select {
+    grid-area: country;
+}
+
+#city-select {
+    grid-area: city;
+}
+
+#profile-image {
+    grid-area: image;
+}
+
+#image-label {
+    grid-area: select-image;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border-radius: 25px;
+}
+
+#image-input {
+    display: none;
+}
+
+#submit-button {
+    grid-area: submit;
+    justify-self: center;
+    border: none;
+    padding: 0px 30px;
+    border-radius: 25px;
+}

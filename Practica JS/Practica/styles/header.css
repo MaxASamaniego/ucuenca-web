@@ -1,0 +1,59 @@
+header {
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    padding: 5px 5px;
+    background-color: var(--primary-color);
+    height: 45px;
+    width: calc(100% - 10px);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-button {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+}
+
+#user-icon {
+    fill: var(--accent-fg-color);
+}
+
+#edit-icon {
+    fill: var(--accent-fg-color);
+}
+
+#theme-icon:hover {
+    transform: rotate(360deg);
+}
+
+#theme-icon-sunrays {
+    stroke: var(--accent-fg-color);
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+    stroke-width: 16;
+    transition: stroke-width 0.5s ease-in-out, transform 0.5s linear;
+}
+
+#theme-icon-sunrays.active {
+    transform: rotate(90deg);
+    stroke-width: 0;
+}
+
+#theme-icon-body {
+    d: path("M185.98 70.0172C217.993 102.04 218.006 153.96 185.983 185.983C153.96 218.006 102.04 218.006 70.0172 185.983C37.9942 153.96 37.9942 102.04 70.0172 70.0172C102.04 37.9943 153.947 37.9943 185.97 70.0172Z");
+    transition: d 0.5s linear;
+}
+
+#theme-icon-body.active {
+    d: path("M102 154C134.023 186.023 218.006 153.96 185.983 185.983C153.96 218.006 102.04 218.006 70.0172 185.983C37.9942 153.96 37.9942 102.04 70.0172 70.0172C102.04 37.9943 69.977 121.977 102 154Z");
+}
+
+.avatar {
+    margin-left: 15px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
