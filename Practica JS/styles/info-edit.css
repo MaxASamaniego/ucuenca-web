@@ -2,28 +2,86 @@
     width: 95%;
 }
 
-#form {
-    display: grid;
-    grid-template-areas: 
-    "name name last-name last-name v-sep image"
-    "id phone birthdate birthdate v-sep image"
-    "address address country city v-sep image"
-    "submit submit submit submit v-sep select-image";
-    grid-template-columns: repeat(4, 1fr) 2px 400px;
-    gap: 40px 10px;
-    min-height: 60vh;
+@media (max-width: 800px) {
+    #form {
+        display: grid;
+        grid-template-areas: 
+        "image"
+        "select-image"
+        "h-sep"
+        "name"
+        "last-name"
+        "id"
+        "phone"
+        "birthdate"
+        "address"
+        "country"
+        "city"
+        "submit";
+        grid-template-rows: 200px auto 2px repeat(9, 1fr);
+        grid-template-columns: 100%;
+        gap: 10px 0px;
+    }
+
+    #edit-v-sep {
+        display: none;
+    }
+
+    #edit-h-sep {
+        grid-area: h-sep;
+    }
+
+    #form * {
+        font-size: 1em;
+    }
+
+    #profile-image {
+        max-width: 90%;
+        max-height: 95%;
+    }
 }
 
-#form * {
-    font-size: 1.2em;
+@media (min-width: 800px) {
+    #form {
+        display: grid;
+        grid-template-areas: 
+        "name name last-name last-name v-sep image"
+        "id phone birthdate birthdate v-sep image"
+        "address address country city v-sep image"
+        "submit submit submit submit v-sep select-image";
+        grid-template-columns: repeat(4, minmax(200px, 1fr)) 2px 400px;
+        gap: 40px 10px;
+        min-height: 60vh;
+    }
+
+    #edit-v-sep {
+        grid-area: v-sep;
+    }
+
+    #edit-h-sep {
+        display: none;
+    }
+
+    #form * {
+        font-size: 1.2em;
+    }
+
+    #profile-image {
+        max-width: 380px;
+        max-height: 600px;
+    }
 }
 
 #form input,
 #form select {
+    min-height: 1.5em;
     outline: none;
     padding: 0px 5%;
     border-radius: 25px;
     border: var(--hint-color) solid 2px;
+    background-color: inherit;
+    color: inherit;
+    transition: inherit;
 }
 
 #form input:focus,
@@ -32,7 +90,7 @@
 }
 
 #form input {
-    background: linear-gradient(var(--primary-color), var(--primary-color)) center bottom 10px /90% 0px no-repeat;
+    background: linear-gradient(var(--primary-color), var(--primary-color)) center bottom 10% /90% 0px no-repeat;
     transition: background-size 0.3s ease;
 }
 
@@ -63,11 +121,12 @@
     grid-template-columns: auto auto;
     align-items: center;
     padding: 0px 5%;
+    margin-right: auto;
 
     border: var(--hint-color) 2px solid;
     border-radius: 25px;
 
-    background: linear-gradient(var(--primary-color), var(--primary-color)) center bottom 10px /90% 0px no-repeat;
+    background: linear-gradient(var(--primary-color), var(--primary-color)) center bottom 10% /90% 0px no-repeat;
     transition: background-size 0.3s ease;
 }
 
@@ -104,6 +163,8 @@
 
 #profile-image {
     grid-area: image;
+    align-self: center;
+    justify-self: center;
 }
 
 #image-label {

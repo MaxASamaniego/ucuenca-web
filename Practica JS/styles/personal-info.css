@@ -1,3 +1,8 @@
+svg#profile-pic {
+    fill: var(--fg-color);
+    width: 300px;
+}
+
 @media (orientation: landscape) {
     #pi-container {
         display: grid;
@@ -15,6 +20,14 @@
         grid-template-columns: auto 2px 300px;
         gap: 15px 15px;
     }
+
+    #pi-h-sep {
+        grid-area: h-sep;
+    }
+
+    #pi-v-sep {
+        grid-area: v-sep;
+    }
     
     #profile-pic {
         grid-area: image;
@@ -30,16 +43,9 @@
 @media (orientation: portrait) {
     #pi-container {
         display: grid;
-        grid-template-rows: repeat(9, auto);
+        grid-template-rows: repeat(11, auto);
+        overflow: hidden;
         row-gap: 15px;
-    }
-    
-    .h-separator {
-        grid-row: 3;
-    }
-    
-    .v-separator {
-        display: none;
     }
     
     #profile-pic {
@@ -47,8 +53,16 @@
         width: 300px;
         justify-self: center;
     }
-    
+
     #name {
         justify-self: center;
+    }
+    
+    #pi-h-sep {
+        grid-row: 3;
+    }
+    
+    #pi-v-sep {
+        display: none;
     }
 }

@@ -28,13 +28,11 @@
 .h-separator {
   height: 0px;
   border: var(--hint-color) 2px solid;
-  grid-area: h-sep;
 }
 
 .v-separator {
   width: 0px;
   border: var(--hint-color) 2px solid;
-  grid-area: v-sep;
 }
 
 body {
@@ -154,4 +152,50 @@ main {
   top: -1px !important;
   left: -1px !important;
   overflow: hidden;
+}
+
+#users-container {
+  width: 30%;
+  height: auto;
+  padding: 20px 20px;
+  margin: auto;
+}
+
+#users-menu {
+  padding: 0px;
+  margin: 0px;
+}
+
+svg.menu-avatar {
+  fill: var(--fg-color);
+  width: 90%;
+}
+
+.menu-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  justify-self: center;
+}
+
+.user-option {
+  display: grid;
+  grid-template-columns: 15% auto;
+  column-gap: 5px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px 5px;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  font-size: 130%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.user-option:hover {
+  background-color: var(--bg-color);
+}
+
+.popup {
+  position: absolute;
 }
