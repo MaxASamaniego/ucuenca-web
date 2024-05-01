@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <script defer src="scripts/mainScript.js"></script>
+    <title>Cuestionario</title>
+</head>
+<body>
+    <main>
+        <form action="#" id="question-number">
+            <input type="number" id="question-number" name="number" placeholder="Número de preguntas" required>
+            <button type="submit">Aceptar</button>
+        </form>
+
+        <form action="#" id="questionnaire" class="hidden">
+            <div id="questions-div">
+
+            </div>
+            <button type="submit" class="hidden" id="answer-button">Enviar respuestas</button>
+        </form>
+
+        <form action="#" id="question-type-form" class="hidden">
+            <input class="block" type="text" name="question" id="question-input" placeholder="Escriba la pregunta aquí" required>
+            
+            <label class="block">
+                <input type="radio" name="questionType" id="text-question" value="text" checked="true">
+                Texto
+            </label>
+
+            <label class="block">
+                <input type="radio" name="questionType" id="true-false-question" value="trueFalse">
+                Verdadero/Falso
+            </label>
+
+            <label class="block">
+                <input type="radio" name="questionType" id="multiple-question" value="multiple">
+                Opción múltiple
+            </label>
+
+            <div id="options-div" class="hidden">
+                <input class="block" type="text" name="option" id="option" placeholder="Opción 1">
+            </div>
+
+            <button type="submit">Añadir</button>
+        </form>
+
+        <div id="results" class="hidden">
+            
+        </div>
+    </main>
+</body>
+</html>
