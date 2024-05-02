@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    padding: 10px 10px;
+    margin: 0;
+}
+
+body *:not(div) {
+    background-color: #FFCF29;
+}
+
+nav {
+    width: calc(20% - 20px);
+    padding: 20px 0px 0px 20px;
+}
+
+#main-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 80%;
+}
+
+header {
+    height: calc(25% - 20px);
+    padding: 20px 0px 0px 20px;
+}
+
+#content-div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 60%;
+}
+
+footer {
+    height: calc(15% - 20px);
+    padding: 20px 0px 0px 20px;
+}
+
+#section-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+section {
+    height: calc(50% - 20px);
+    padding: 20px 0px 0px 20px;
+}
+
+aside {
+    width: calc(20% - 20px);
+    padding: 20px 0px 0px 20px;
+}

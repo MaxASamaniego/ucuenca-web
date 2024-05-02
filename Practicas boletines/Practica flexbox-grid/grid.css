@@ -1,0 +1,49 @@
+body {
+    display: grid;
+    grid-template-areas: 
+    "nav header header"
+    "nav section1 aside"
+    "nav section2 aside"
+    "nav footer footer";
+    grid-template-columns: 20fr 65fr 15fr;
+    grid-template-rows: 25fr 30fr 30fr 15fr;
+    gap: 10px 10px;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    padding: 10px 10px;
+    margin: 0;
+}
+
+body *:not(div) {
+    background-color: #FFCF29;
+}
+
+nav {
+    grid-area: nav;
+    padding: 20px 0px 0px 20px;
+}
+
+header {
+    grid-area: header;
+    padding: 20px 0px 0px 20px;
+}
+
+#section1 {
+    grid-area: section1;
+    padding: 20px 0px 0px 20px;
+}
+
+#section2 {
+    grid-area: section2;
+    padding: 20px 0px 0px 20px;
+}
+
+aside {
+    grid-area: aside;
+    padding: 20px 0px 0px 20px;
+}
+
+footer {
+    grid-area: footer;
+    padding: 20px 0px 0px 20px;
+}
