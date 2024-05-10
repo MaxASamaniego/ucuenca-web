@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normalize CSS</title>
+</head>
+<body>
+    <h1 style="color: blue;">Programación web</h1>
+    <h2>Ejemplo de Normalize.css</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum error ad placeat itaque cum iure vitae ut qui aut non animi tempore corporis aliquid necessitatibus magnam modi, odit ullam hic?</p>
+    <p id="state">Estado: Sin Normalize.css</p>
+    <button type="button" onclick="addNormalize()">Añadir Normalize</button>
+    <button type="button" onclick="removeNormalize()">Remover Normalize</button>
+
+    <script>
+        const addNormalize = () => {
+            const stateTag = document.getElementById("state");
+            const docHead = document.querySelector("head");
+            const link = document.createElement("link");
+
+            link.rel = "stylesheet";
+            link.href = "node_modules/normalize.css/normalize.css"
+
+            docHead.appendChild(link);
+
+            stateTag.innerText = "Estado: Con Normalize.css";
+        }
+        
+        const removeNormalize = () => {
+            const stateTag = document.getElementById("state");
+            const stylesheetLink = document.querySelector("head>link");
+
+            stylesheetLink.remove();
+            stateTag.innerText = "Estado: Sin Normalize.css"
+        }
+    </script>
+</body>
+</html>

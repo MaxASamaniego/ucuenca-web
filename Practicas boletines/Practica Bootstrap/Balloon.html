@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/balloon-css/balloon.css">
+    <title>🎈Balloon CSS</title>
+</head>
+<body>
+    <div>
+        <button aria-label="Tooltip" data-balloon-pos="up">Tooltip normal</button>
+        <button data-balloon-pos="up" data-balloon-length="large" aria-label="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. Animi qui iste fuga repellendus explicabo. Atque nulla alias amet quod, eveniet voluptas minus iste repellat sed rem, harum aliquid.">Tooltip largo</button>
+        <button aria-label="Tooltip" data-balloon-pos="up" class="styled-tooltip">Tooltip estilizada</button>
+    </div>
+
+    <style>
+        body {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        div {
+            margin: auto;
+        }
+
+        .styled-tooltip {
+            --balloon-color: blue;
+            --balloon-font-size: 20px;
+            --balloon-move: 30px;
+        }
+    </style>
+</body>
+</html>

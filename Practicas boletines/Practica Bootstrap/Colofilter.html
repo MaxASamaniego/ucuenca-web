@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colofilter.css">
+    <title>Colofilter</title>
+</head>
+<body>
+    <p><b>Nota:</b> No funciona en Opera, Internet Explorer, MS Edge o Safari debido al soporte.</p>
+    <div>
+        <img src="image.png" alt="A cat" class="blend-blue">
+        <img src="image.png" alt="A cat" class="blend-orange">
+        <img src="image.png" alt="A cat" class="blend-red">
+        <img src="image.png" alt="A cat" class="blend-green">
+        <img src="image.png" alt="A cat" class="blend-yellow">
+        <img src="image.png" alt="A cat" class="blend-purple">
+        <img src="image.png" alt="A cat" class="blend-pink">
+        <img src="image.png" alt="A cat" class="blend-red-blue">
+        <img src="image.png" alt="A cat" class="blend-blue-yellow">
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            width: calc(100vw - 20px);
+            height: 100vh;
+        }
+
+        div {
+            margin: auto;
+            padding: 5px;
+            display: grid;
+            width: calc(100% - 10px);
+            justify-items: center;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        img {
+            width: 85%;
+        }
+    </style>
+</body>
+</html>
