@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mantenimiento de personas</title>
+    <link rel="stylesheet" href="indexPage.css">
     <script defer src="mainScript.js"></script>
 </head>
 <body>
     <form action="#" id="person-form">
-        <label for="name-input">Nombre:</label>
-        <input type="text" id="name-input">
+        <input type="text" id="name-input" placeholder="Nombre">
 
-        <label for="lastname-input">Apellido:</label>
-        <input type="text" id="lastname-input">
+        <input type="text" id="lastname-input" placeholder="Apellido">
 
-        <label for="age-input">Edad:</label>
-        <input type="number" min="0" step="1" id="age-input">
+        <input type="number" min="0" step="1" id="age-input" placeholder="Edad">
 
-        <label for="id-input">ID:</label>
-        <input type="text" id="id-input">
+        <input type="text" id="id-input" placeholder="ID">
 
-        <button type="submit">Enviar</button>
+        <div>
+            <button type="submit">Enviar</button>
+            <a href="./info.html" type="button">Ver información</a>
+        </div>
     </form>
 </body>
 </html>

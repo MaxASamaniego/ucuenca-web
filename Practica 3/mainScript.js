@@ -1,5 +1,5 @@
 class Person {
-    Person(name, lastName, age, id) {
+    constructor(name, lastName, age, id) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
@@ -23,7 +23,7 @@ personForm.addEventListener("submit", (e) => {
 
     const name = nameInput.value;
     const lastName = lastNameInput.value;
-    const age = ageInput.value;
+    const age = parseInt(ageInput.value);
     const id = idInput.value;
 
     const person = new Person(name, lastName, age, id);
@@ -34,6 +34,6 @@ personForm.addEventListener("submit", (e) => {
         alert("Registro creado");
     }
 
-    personDict[id] = JSON.stringify(person);
-    localStorage.setItem("peopleInfo", JSON.stringify(personDict))
+    personDict[id] = person;
+    localStorage.setItem("peopleInfo", JSON.stringify(personDict));
 });

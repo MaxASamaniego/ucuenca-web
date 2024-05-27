@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    background-color: rgb(240, 240, 240);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 40%;
+    background-color: white;
+    border-radius: 16px;
+    margin: auto;
+    gap: 15px;
+}
+
+input {
+    font-size: large;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: cadetblue;
+    outline: none;
+}
+
+div {
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid cornflowerblue;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    padding-inline-start: 6px;
+    padding-inline-end: 6px;
+    background-color: transparent;
+    transition-property: background-color color;
+    transition: 0.3s ease;
+}
+
+a:hover,
+button:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
